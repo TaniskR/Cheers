@@ -1,73 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=3.0">
-    <title>Envelope Link</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-family: Arial, sans-serif;
-        }
+/* For small screens (mobile phones) */
+@media screen and (max-width: 600px) {
+    .envelope {
+        width: 80%;  /* Resize envelope image on small screens */
+    }
 
-        .container {
-            text-align: center;
-        }
+    .message img {
+        width: 80%;  /* Resize the message image on small screens */
+    }
+}
 
-        /* Style for the image envelope */
-        .envelope {
-max-width: 100%
-    width: 100px;  /* Adjust the size as needed */
-            cursor: pointer;
-            transition: transform 0.3s ease-in-out; /* Smooth animation on hover */
-        }
+/* For medium screens (tablets) */
+@media screen and (max-width: 1024px) {
+    .envelope {
+        width: 90%;  /* Resize envelope image on medium screens */
+    }
 
-        /* Animation for when the envelope is hovered */
-        .envelope:hover {
-            transform: scale(1.2); /* Enlarge on hover */
-        }
-
-        /* Hidden message (which is now an image) */
-        .message {
-            display: none;
-            margin-top: 20px;
-        }
-
-        /* Style for the image that will replace the text message */
-        .message img {
-max-width:100%
-    width: 100px;  /* Adjust the size of the message image */
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-
-    <div class="container">
-        <!-- Envelope image (replace the path with your image's correct path) -->
-        <img src="Envelope BG.png" class="envelope" onclick="showMessage()" alt="Envelope">
-
-        <!-- Hidden image that will show on click -->
-        <div id="message" class="message">
-            <img src="Cheers to 40.png" alt="Your Custom Image">
-        </div>
-    </div>
-
-    <script>
-        function showMessage() {
-            // Hide the envelope image
-            var envelope = document.querySelector('.envelope');
-            envelope.style.display = 'none';
-
-            // Show the image in place of the message
-            var messageDiv = document.getElementById('message');
-            messageDiv.style.display = 'block';
-        }
-    </script>
-
-</body>
-</html>
+    .message img {
+        width: 90%;  /* Resize the message image on medium screens */
+    }
+}
